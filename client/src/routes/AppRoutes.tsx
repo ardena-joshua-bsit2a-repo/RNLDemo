@@ -1,20 +1,19 @@
 import { Route, Routes } from "react-router-dom";
 import AppLayout from "../layout/AppLayout";
-
-const SampleComponent = () => {
-  return (
-    <>
-      <h1 className="text-red-600">Hello World</h1>
-    </>
-  );
-};
+import GenderMainPage from "../pages/Gender/GenderMainPage";
+import EditGenderPage from "../pages/Gender/EditGenderPage";
+import DeleteGenderPage from "../pages/Gender/DeleteGenderPage";
+import UserMainPage from "../pages/User/UserMainPage";
 
 const AppRoutes = () => {
   return (
     <>
       <Routes>
         <Route element={<AppLayout />}>
-          <Route path="/" element={<SampleComponent />} />
+          <Route path="/" element={<GenderMainPage />} />
+          <Route path="/gender/edit" element={<EditGenderPage />} />
+          <Route path="/gender/delete" element={<DeleteGenderPage />} />
+          <Route path="/users" element={<UserMainPage/>} />
         </Route>
       </Routes>
     </>
